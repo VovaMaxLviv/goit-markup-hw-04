@@ -90,6 +90,27 @@ img {
     font-style: normal;
 }
 
+.info:first-child::before{
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    color: #757575;
+    content: "";
+    background-image: url(../images/envelope\ \(hover\).svg);
+    background-size: contain;
+}
+.info:last-child::before {
+    display: inline-block;
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    color: #757575;
+    content: "";
+    background-image: url(../images/smartphone.svg);
+    background-size: contain;
+}
+
 .black:hover,
 .info:hover {
     color: var(--blu);
@@ -107,12 +128,16 @@ img {
     left: 0px;
     top: 80px;
     color: var(--white);
-    background-image: url("/images/fon.jpg");
-    justify-content: center;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url("../images/fon.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    justify-content: center;
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid var(--main-color);
 }
 .bisnes .container{
     display: flex;
@@ -178,6 +203,43 @@ img {
     display: flex;
     justify-content: space-between;
     text-align: left;
+}
+.antena{
+    background: #F5F4FA;
+    border-radius: 4px;
+    background-image: url(../images/antenna\ 1.png),url(../images/Rectangle\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: auto , auto;
+    background-position: center , center;
+    margin-bottom: 30px;
+    
+}
+.clock{
+    background: #F5F4FA;
+    border-radius: 4px;
+    background-image: url(../images/clock\ 1.png), url(../images/Rectangle\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: auto, auto;
+    background-position: center, center;
+    margin-bottom: 30px;
+}
+.diagrama{
+    background: #F5F4FA;
+    border-radius: 4px;
+    background-image: url(../images/diagram\ 1.png), url(../images/Rectangle\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: auto, auto;
+    background-position: center, center;
+    margin-bottom: 30px;
+}
+.astronaut{
+    background: #F5F4FA;
+    border-radius: 4px;
+    background-image: url(../images/astronaut\ 1.png), url(../images/Rectangle\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: auto, auto;
+    background-position: center, center;
+    margin-bottom: 30px;
 }
 .mum h3{
     font-weight: 700;
@@ -270,6 +332,87 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-color);
+    margin-bottom: 50px;
+}
+.clients ul{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: auto;
+}
+.logo{
+    cursor: pointer;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    margin-right: 30px;
+    text-align: center;
+}
+.logo:nth-child(1){
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    display: block;
+    height: 92px;
+    width: 170px;
+    background-image: url(../images/Logo.svg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 30px;    
+}
+.logo:nth-child(2){
+    display: block;
+    height: 92px;
+    width: 170px;
+    background-image: url(../images/Logo\ \(1\).svg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 30px;    
+}
+.logo:nth-child(3) {
+    display: block;
+    height: 92px;
+    width: 170px;
+    background-image: url(../images/Logo\ \(2\).svg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 30px;    
+}
+.logo:nth-child(4) {
+    display: block;
+    height: 92px;
+    width: 170px;
+    background-image: url(../images/Logo\ \(3\).svg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 30px;    
+}
+.logo:nth-child(5) {
+    display: block;
+    height: 92px;
+    width: 170px;
+    background-image: url(../images/Logo\ \(4\).svg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 30px;    
+}
+.logo:nth-child(6) {
+    display: block;
+    height: 92px;
+    width: 170px;
+    background-image: url(../images/Logo\ \(5\).svg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 0px;
+    margin-left: 0px;
+    
+}
+.logo:hover, .logo:focus{
+    border-color: var(--blu);
 }
 /*---------------FOOTER--------------------*/
 .footer{
