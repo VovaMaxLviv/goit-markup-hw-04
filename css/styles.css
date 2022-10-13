@@ -57,14 +57,13 @@ img {
 .headertext{
     display: flex;
     justify-content: space-between;
-    
 }
 .headertext :hover{
     color: var(--blu);
 }
-.headertext ul,li,a{
+/* .headertext ul,li,a{
     text-decoration: none;
-}
+} */
 
 .web {
     color: var(--blu);
@@ -90,36 +89,66 @@ img {
     font-style: normal;
 }
 
-.info:first-child::before{
+.infotel{
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #757575;
+    text-decoration: none;
+    padding: 0 25px;
+    font-style: normal;
+}
+.headertext-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headertext-info li:first-child:hover .info::before {
+    background-image: url(../images/mail_color.svg);
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    content: "";
+    background-size: contain;
+}
+
+.headertext-info li:last-child:hover .infotel::before {
+    background-image: url(../images/phone_iphone.svg);
+    width: 10px;
+    height: 16px;
+    background-repeat: no-repeat;
+    content: "";
+    background-size: contain;
+}
+.info::before{
     display: inline-block;
     width: 16px;
     height: 12px;
     margin-right: 10px;
-    color: #757575;
     content: "";
-    background-image: url(../images/envelope\ \(hover\).svg);
+    background-image: url(../images/mail.svg);
     background-size: contain;
+    background-repeat: no-repeat;
 }
-.info:last-child::before {
+
+.infotel::before{
     display: inline-block;
     width: 10px;
     height: 16px;
     margin-right: 10px;
     color: #757575;
     content: "";
-    background-image: url(../images/smartphone.svg);
-    background-size: contain;
+    background-image: url(../images/phone.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
 }
-
 .black:hover,
-.info:hover {
+.info:hover, .black:focus,
+.info:focus, .infotel:hover, .infotel:focus  {
     color: var(--blu);
 }
 
-.black:focus,
-.info:focus {
-    color: var(--blu);
-}
 .current {
     color: var(--blu);
 }
@@ -457,10 +486,15 @@ img {
     text-decoration: none;
     font-style: normal;
 }
-.social{
 
+.join{
+    color: var(--white);
+    font-style: normal;
+    display: inline-flex;
+    flex-direction: column;
+    text-transform: uppercase;
 }
-.social h2{
+.join h2{
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -468,6 +502,17 @@ img {
     text-transform: uppercase;
     color: var(--white);
 }
+.social{
+    display: flex;
+    justify-content: space-between;
+}
+.social li{
+    height: 44px;
+    width: 44px;
+    clip-path: ellipse(closest-side farthest-side);
+    background: rgba(255, 255, 255, 0.1); 
+}
+
 /*--------------Potrfolio-----------------*/
 .direction .container{
     width: 1200px;
