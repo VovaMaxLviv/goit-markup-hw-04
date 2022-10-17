@@ -87,6 +87,7 @@ img {
     text-decoration: none;
     padding:0 25px;
     font-style: normal;
+    align-items: center;
 }
 
 .infotel{
@@ -97,56 +98,22 @@ img {
     text-decoration: none;
     padding: 0 25px;
     font-style: normal;
+    align-items: center;
 }
 .headertext-info {
     display: flex;
     justify-content: space-between;
 }
-
-.headertext-info li:first-child:hover .info::before {
-    background-image: url(../images/mail_color.svg);
-    width: 16px;
-    height: 12px;
+.icon-header{
+    fill: #757575;
     margin-right: 10px;
-    background-repeat: no-repeat;
-    content: "";
-    background-size: contain;
 }
 
-.headertext-info li:last-child:hover .infotel::before {
-    background-image: url(../images/phone_iphone.svg);
-    width: 10px;
-    height: 16px;
-    background-repeat: no-repeat;
-    content: "";
-    background-size: contain;
-}
-.info::before{
-    display: inline-block;
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    content: "";
-    background-image: url(../images/mail.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.infotel::before{
-    display: inline-block;
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    color: #757575;
-    content: "";
-    background-image: url(../images/phone.svg);
-    background-size:contain;
-    background-repeat: no-repeat;
-}
 .black:hover,
 .info:hover, .black:focus,
 .info:focus, .infotel:hover, .infotel:focus  {
     color: var(--blu);
+    fill: var(--blu);
 }
 
 .current {
@@ -233,42 +200,31 @@ img {
     justify-content: space-between;
     text-align: left;
 }
-.antena{
-    background: #F5F4FA;
-    border-radius: 4px;
-    background-image: url(../images/antenna\ 1.png),url(../images/Rectangle\ 3.svg);
+.mum::before{
+    display: block;
+    content: "";
+    height: 120px;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: auto , auto;
-    background-position: center , center;
-    margin-bottom: 30px;
-    
-}
-.clock{
-    background: #F5F4FA;
-    border-radius: 4px;
-    background-image: url(../images/clock\ 1.png), url(../images/Rectangle\ 3.svg);
-    background-repeat: no-repeat;
-    background-size: auto, auto;
-    background-position: center, center;
+    background-position: center;
+    background-color: #F5F4FA;
     margin-bottom: 30px;
 }
-.diagrama{
-    background: #F5F4FA;
-    border-radius: 4px;
-    background-image: url(../images/diagram\ 1.png), url(../images/Rectangle\ 3.svg);
-    background-repeat: no-repeat;
-    background-size: auto, auto;
-    background-position: center, center;
-    margin-bottom: 30px;
+.mum:first-child::before{
+    background-image: url(../images/antenna\ 1.svg);
+    background-size: 65.32px 70px;
 }
-.astronaut{
-    background: #F5F4FA;
-    border-radius: 4px;
-    background-image: url(../images/astronaut\ 1.png), url(../images/Rectangle\ 3.svg);
-    background-repeat: no-repeat;
-    background-size: auto, auto;
-    background-position: center, center;
-    margin-bottom: 30px;
+.mum:nth-child(2)::before{
+    background-image: url(../images/clock\ 1.svg);
+    background-size: 67px 70px;
+}
+.mum:nth-child(3)::before{
+    background-image: url(../images/diagram\ 1.svg);
+    background-size: 70px 53.69px;
+}
+.mum:last-child::before{
+    background-image: url(../images/astronaut\ 1.svg);
+    background-size: 54.83px 60.66px;
 }
 .mum h3{
     font-weight: 700;
@@ -350,6 +306,59 @@ img {
     letter-spacing: 0.03em;
     margin-bottom: 10px;
 }
+.social-comand {
+    display: flex;
+    justify-content: center;
+
+}
+
+/* .social-comand li {
+    margin: 5px;
+    padding: 0px;
+    border-radius: 44px;
+    background: rgba(255, 255, 255, 0.1);
+} */
+.social-comand a{
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0px;
+    padding: 0px;
+}
+.social-comand a:hover{
+    background-color: var(--blu);
+}
+.instagram-comand:hover, .twitter-comand:hover, .facebook-comand:hover, .linkedin-comand:hover{
+    fill: var(--white); 
+} 
+.instagram-comand {
+    fill: #AFB1B8;
+    height: 20px;
+    width: 20px;
+}
+
+.twitter-comand {
+    fill: #AFB1B8;
+    height: 20px;
+    width: 20px;
+}
+
+.facebook-comand {
+    fill: #AFB1B8;
+    height: 20px;
+    width: 20px;
+}
+
+.linkedin-comand {
+    fill: #AFB1B8;
+    height: 20px;
+    width: 20px;
+}
 .clients{
     display: flex;
     padding: 94px 0px;
@@ -369,79 +378,20 @@ img {
     margin: auto;
     padding: auto;
 }
-.logo{
-    cursor: pointer;
+
+.icon-clients{
+    width: 170px;
+    height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    margin-right: 30px;
-    text-align: center;
+    margin: 15px;
+    align-items: center;
+    fill: #AFB1B8;;
+    display: flex;
 }
-.logo:nth-child(1){
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    display: block;
-    height: 92px;
-    width: 170px;
-    background-image: url(../images/Logo.svg);
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 30px;    
-}
-.logo:nth-child(2){
-    display: block;
-    height: 92px;
-    width: 170px;
-    background-image: url(../images/Logo\ \(1\).svg);
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 30px;    
-}
-.logo:nth-child(3) {
-    display: block;
-    height: 92px;
-    width: 170px;
-    background-image: url(../images/Logo\ \(2\).svg);
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 30px;    
-}
-.logo:nth-child(4) {
-    display: block;
-    height: 92px;
-    width: 170px;
-    background-image: url(../images/Logo\ \(3\).svg);
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 30px;    
-}
-.logo:nth-child(5) {
-    display: block;
-    height: 92px;
-    width: 170px;
-    background-image: url(../images/Logo\ \(4\).svg);
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 30px;    
-}
-.logo:nth-child(6) {
-    display: block;
-    height: 92px;
-    width: 170px;
-    background-image: url(../images/Logo\ \(5\).svg);
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 0px;
-    margin-left: 0px;
-    
-}
-.logo:hover, .logo:focus{
-    border-color: var(--blu);
+.icon-clients:hover{
+    fill: var(--blu);
+    border: 1px solid #2196F3;
 }
 /*---------------FOOTER--------------------*/
 .footer{
@@ -451,17 +401,17 @@ img {
     display: list-item;
 }
 .footer .container{
-    padding-top: 60px;
+    padding: 60px 0px;
+    display: flex;
 }
-.headerte {
+.footer-text {
     padding-top: 20px;
-    padding-bottom: 60px;
 }
-.headerte :hover {
+.footer-text :hover {
     color: var(--blu);
 }
 
-.headerte ul,li,a {
+.footer-text ul,li,a {
     text-decoration: none;
 }
 .google {
@@ -488,11 +438,15 @@ img {
 }
 
 .join{
+    margin-top: 10px;
+    margin-left: 70px;
     color: var(--white);
     font-style: normal;
     display: inline-flex;
     flex-direction: column;
     text-transform: uppercase;
+    width: 206px;
+    height: 80px;
 }
 .join h2{
     font-weight: 700;
@@ -505,14 +459,44 @@ img {
 .social{
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
-.social li{
+.social a{
     height: 44px;
     width: 44px;
-    clip-path: ellipse(closest-side farthest-side);
-    background: rgba(255, 255, 255, 0.1); 
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0px;
+    padding: 0px;
 }
-
+.instagram{
+    fill:var(--white) ;
+    height: 20px;
+    width: 20px;
+} 
+.twitter {
+    fill:var(--white) ;
+    height: 20px;
+    width: 20px;
+}
+.facebook {
+    fill:var(--white) ;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+}
+.linkedin {
+    fill:var(--white) ;
+    height: 20px;
+    width: 20px;
+}
+.social a:hover{
+   background-color: var(--blu);
+}
 /*--------------Potrfolio-----------------*/
 .direction .container{
     width: 1200px;
