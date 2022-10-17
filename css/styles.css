@@ -61,9 +61,6 @@ img {
 .headertext :hover{
     color: var(--blu);
 }
-/* .headertext ul,li,a{
-    text-decoration: none;
-} */
 
 .web {
     color: var(--blu);
@@ -111,7 +108,8 @@ img {
 
 .black:hover,
 .info:hover, .black:focus,
-.info:focus, .infotel:hover, .infotel:focus  {
+.info:focus, .infotel:hover, .infotel:focus, .icon-header:focus,
+.icon-header:hover {
     color: var(--blu);
     fill: var(--blu);
 }
@@ -309,6 +307,7 @@ img {
 .social-comand {
     display: flex;
     justify-content: center;
+    margin-top: 16px;
 
 }
 
