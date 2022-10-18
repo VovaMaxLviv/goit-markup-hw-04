@@ -36,15 +36,11 @@ img {
     height: auto;
 }
 /*---------------------HEADER-----------*/
-/*.header{
-    height: 80px;
-}*/
+
 .header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0px 25px 0px;
-
 }
 .webstudio {
     font-family: 'Raleway', sans-serif;
@@ -53,10 +49,12 @@ img {
     font-size: 26px;
     line-height: 31px;
     color: #000000;
+    padding: 24px 0px;
 }
 .headertext{
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 .headertext :hover{
     color: var(--blu);
@@ -70,10 +68,10 @@ img {
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 0.02em;
-    padding: 0 25px ;
     margin: auto;
     font-style: normal;
     display: block;
+    padding: 24px 0px;
 }
 
 .info{
@@ -82,9 +80,10 @@ img {
     letter-spacing: 0.02em;
     color: #757575;
     text-decoration: none;
-    padding:0 25px;
     font-style: normal;
     align-items: center;
+    padding: 24px 0px;
+    fill: #757575;
 }
 
 .infotel{
@@ -96,20 +95,20 @@ img {
     padding: 0 25px;
     font-style: normal;
     align-items: center;
+    fill: #757575;
 }
 .headertext-info {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 .icon-header{
-    fill: #757575;
     margin-right: 10px;
 }
 
 .black:hover,
 .info:hover, .black:focus,
-.info:focus, .infotel:hover, .infotel:focus, .icon-header:focus,
-.icon-header:hover {
+.info:focus, .infotel:hover, .infotel:focus{
     color: var(--blu);
     fill: var(--blu);
 }
@@ -173,7 +172,6 @@ img {
 }
 .button:hover{
     background-color: #188CE8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 15);
 }
 
 .benefits{
@@ -198,32 +196,34 @@ img {
     justify-content: space-between;
     text-align: left;
 }
-.mum::before{
-    display: block;
-    content: "";
+
+.mum-icon{
+    display: flex;
     height: 120px;
     background-size: contain;
-    background-repeat: no-repeat;
     background-position: center;
     background-color: #F5F4FA;
     margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
 }
-.mum:first-child::before{
-    background-image: url(../images/antenna\ 1.svg);
-    background-size: 65.32px 70px;
+.antena-icon{
+    width: 65.32px;
+    height: 70px;
 }
-.mum:nth-child(2)::before{
-    background-image: url(../images/clock\ 1.svg);
-    background-size: 67px 70px;
+.clock-icon {
+    width: 67px;
+    height: 70px;
 }
-.mum:nth-child(3)::before{
-    background-image: url(../images/diagram\ 1.svg);
-    background-size: 70px 53.69px;
+.diagram-icon {
+    width: 70px;
+    height: 53.69px;
 }
-.mum:last-child::before{
-    background-image: url(../images/astronaut\ 1.svg);
-    background-size: 54.83px 60.66px;
+.astronaut-icon {
+    width: 54.83px;
+    height: 60.66px;
 }
+
 .mum h3{
     font-weight: 700;
     font-size: 14px;
@@ -311,12 +311,6 @@ img {
 
 }
 
-/* .social-comand li {
-    margin: 5px;
-    padding: 0px;
-    border-radius: 44px;
-    background: rgba(255, 255, 255, 0.1);
-} */
 .social-comand a{
     height: 44px;
     width: 44px;
@@ -328,39 +322,36 @@ img {
     background: rgba(255, 255, 255, 0.1);
     margin: 0px;
     padding: 0px;
+    fill: #AFB1B8;
+    margin-right: 10px;
 }
-.social-comand a:hover{
+.social-comand a:hover, .social-comand a:focus{
     background-color: var(--blu);
+    fill: var(--white);
 }
-.instagram-comand:hover, .twitter-comand:hover, .facebook-comand:hover, .linkedin-comand:hover{
-    fill: var(--white); 
-} 
 .instagram-comand {
-    fill: #AFB1B8;
     height: 20px;
     width: 20px;
 }
-
 .twitter-comand {
-    fill: #AFB1B8;
     height: 20px;
     width: 20px;
 }
-
 .facebook-comand {
-    fill: #AFB1B8;
     height: 20px;
     width: 20px;
 }
-
 .linkedin-comand {
-    fill: #AFB1B8;
     height: 20px;
     width: 20px;
 }
 .clients{
+    padding: 94px 0;
+}
+.clients li{
     display: flex;
-    padding: 94px 0px;
+    width: calc(100%/6-30px/6*5);
+    height: 92px;
 }
 .clients h2{
     font-weight: 700;
@@ -374,21 +365,20 @@ img {
 .clients ul{
     display: flex;
     justify-content: space-between;
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .icon-clients{
-    width: 170px;
-    height: 92px;
+    width: 100%;
+    height: 100%;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    margin: 15px;
     align-items: center;
     fill: #AFB1B8;;
     display: flex;
 }
-.icon-clients:hover{
+.icon-clients:hover, .icon-clients:focus{
     fill: var(--blu);
     border: 1px solid #2196F3;
 }
@@ -402,9 +392,13 @@ img {
 .footer .container{
     padding: 60px 0px;
     display: flex;
+    align-items: baseline;
 }
 .footer-text {
     padding-top: 20px;
+}
+.adress li{
+    margin: 9px 0px;
 }
 .footer-text :hover {
     color: var(--blu);
@@ -437,7 +431,6 @@ img {
 }
 
 .join{
-    margin-top: 10px;
     margin-left: 70px;
     color: var(--white);
     font-style: normal;
@@ -597,6 +590,11 @@ img {
     width: 320px;
     
     padding: 24px 20px;
+}
+.makerss:hover, .makerss:focus{
+    background-color: var(--white);
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 
